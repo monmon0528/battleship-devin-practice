@@ -44,7 +44,7 @@ This runs the unit tests in `tests/` with Node's built-in test runner. They cove
 - full simulated games
 - the computer's targeting
 
-GitHub Actions runs `npm test` on Node 18, 20 and 22 for every pull request targeting `main`, and for every push to `main` (see `.github/workflows/ci.yml`).
+GitHub Actions runs `npm test` on Node 18, 22 and 24 for every pull request targeting `main`, and for every push to `main` (see `.github/workflows/ci.yml`).
 
 ## Project structure
 
