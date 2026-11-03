@@ -37,12 +37,22 @@ npm test
 This runs the unit tests in `tests/` with Node's built-in test runner. They cover:
 
 - board creation
-- ship placement: overlaps, edges, and 500 randomised fleets
-- attack results: hit, miss, sunk, repeat and invalid shots
+- ship placement: overlaps, edges, invalid coordinates, and 500 randomised fleets
+- random fleet placement edge cases: full boards, exact fits, the injected random source
+- attack results: hit, miss, sunk, repeat and invalid (out-of-bounds or non-integer) shots
 - turn order
 - win and lose detection
 - full simulated games
 - the computer's targeting
+- the static server (`tests/server.test.js`): content types, 404s, path-traversal 403s and malformed URLs, by starting `server.js` on a free port
+
+To see a coverage report as well:
+
+```bash
+npm run test:coverage
+```
+
+Node only reports files that the tests actually load. `src/ui.js` needs a browser DOM and has no tests yet, so it doesn't appear in the report.
 
 GitHub Actions runs `npm test` on Node 18, 22 and 24 for every pull request targeting `main`, and for every push to `main` (see `.github/workflows/ci.yml`).
 
