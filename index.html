@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Battleship</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Battleship</h1>
+      <button id="restart" class="restart" type="button">Restart Game</button>
+    </header>
+
+    <main>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section class="boards">
+        <article class="panel">
+          <h2>Your Fleet</h2>
+          <div id="player-board" class="board" aria-label="Your board"></div>
+          <ul id="player-ships" class="ships"></ul>
+        </article>
+
+        <article class="panel">
+          <h2>Enemy Waters</h2>
+          <div id="computer-board" class="board enemy" aria-label="Enemy board"></div>
+          <ul id="computer-ships" class="ships"></ul>
+        </article>
+      </section>
+
+      <section class="info">
+        <ul class="legend" aria-label="Legend">
+          <li><span class="swatch ship"></span>Ship</li>
+          <li><span class="swatch hit"></span>Hit</li>
+          <li><span class="swatch miss"></span>Miss</li>
+          <li><span class="swatch sunk"></span>Sunk</li>
+        </ul>
+        <ol id="log" class="log" aria-label="Battle log"></ol>
+      </section>
+    </main>
+
+    <script type="module" src="src/ui.js"></script>
+  </body>
+</html>
