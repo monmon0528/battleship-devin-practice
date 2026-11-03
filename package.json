@@ -1,0 +1,14 @@
+{
+  "name": "battleship-devin-practice",
+  "version": "1.0.0",
+  "description": "A simple browser Battleship game against the computer.",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  }
+}
